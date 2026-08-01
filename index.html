@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafizh Alifiar | Personal Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#3b82f6);
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:30px 0;
+}
+
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.profile{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:white;
+    color:#2563eb;
+    font-size:60px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+header h1{
+    margin-top:20px;
+    font-size:42px;
+}
+
+header p{
+    opacity:.9;
+    margin-top:10px;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    margin-top:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#93c5fd;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.box{
+    background:rgba(255,255,255,.08);
+    padding:18px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.15);
+}
+
+.quote{
+    text-align:center;
+    font-size:20px;
+    font-style:italic;
+    margin-top:10px;
+}
+
+button{
+    display:block;
+    margin:20px auto 0;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#3b82f6;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    opacity:.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <div class="profile">A</div>
+
+    <h1>Hafizh Alifiar</h1>
+
+    <p>Halo! Saya biasa dipanggil <b>Alip</b>.</p>
+</header>
+
+<div class="card">
+<h2>Tentang Saya</h2>
+
+<div class="info">
+
+<div class="box">
+<h3>Nama</h3>
+<p>Hafizh Alifiar</p>
+</div>
+
+<div class="box">
+<h3>Panggilan</h3>
+<p>Alip</p>
+</div>
+
+<div class="box">
+<h3>Kelas</h3>
+<p>XII TKJ B</p>
+</div>
+
+<div class="box">
+<h3>Hobi</h3>
+<p>Tidur 😴</p>
+</div>
+
+<div class="box">
+<h3>Skill</h3>
+<p>Masih belajar dan terus berkembang.</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2>Favorit</h2>
+
+<div class="info">
+
+<div class="box">
+<h3>🎨 Warna</h3>
+<p>Biru</p>
+</div>
+
+<div class="box">
+<h3>🍜 Makanan</h3>
+<p>Mie Ayam</p>
+</div>
+
+<div class="box">
+<h3>🍹 Minuman</h3>
+<p>Mocktail</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Quote</h2>
+
+<p class="quote" id="quote">
+"Terus belajar, karena setiap hari adalah kesempatan untuk berkembang."
+</p>
+
+<button onclick="quoteBaru()">Quote Baru</button>
+
+</div>
+
+<footer>
+© 2026 Hafizh Alifiar
+</footer>
+
+</div>
+
+<script>
+
+const quotes=[
+"Terus belajar, karena setiap hari adalah kesempatan untuk berkembang.",
+"Jangan takut memulai dari nol.",
+"Proses tidak akan mengkhianati hasil.",
+"Selalu jadi versi terbaik dari dirimu.",
+"Nikmati hidup, tetap rendah hati, dan jangan menyerah."
+];
+
+function quoteBaru(){
+let random=Math.floor(Math.random()*quotes.length);
+document.getElementById("quote").innerHTML=quotes[random];
+}
+
+</script>
+
+</body>
+  </html>
